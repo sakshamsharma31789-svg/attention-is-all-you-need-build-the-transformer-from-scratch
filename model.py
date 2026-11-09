@@ -75,8 +75,13 @@ def compute_positional_div_term(d_model):
     return div_term
     pass
 
-# Step 9 - build_position_index_column (not yet solved)
-# TODO: implement
+# Step 9 - build_position_index_column
+import torch
+
+def build_position_index_column(max_len):
+    positions = torch.arange(max_len,dtype=torch.float32)
+    return positions.unsqueeze(1)
+    pass
 
 # Step 10 - fill_even_indices_with_sin (not yet solved)
 # TODO: implement
