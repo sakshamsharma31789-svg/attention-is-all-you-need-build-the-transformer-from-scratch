@@ -59,8 +59,12 @@ def stack_padded_sequences_to_batch(padded_sequences):
     return torch.tensor(padded_sequences,dtype=torch.long)
     pass
 
-# Step 7 - scale_embeddings_by_sqrt_d_model (not yet solved)
-# TODO: implement
+# Step 7 - scale_embeddings_by_sqrt_d_model
+import math
+import torch
+
+def scale_embeddings_by_sqrt_d_model(embeddings, d_model):
+    return embeddings*(d_model**(1/2))
 
 # Step 8 - compute_positional_div_term (not yet solved)
 # TODO: implement
