@@ -50,8 +50,14 @@ def pad_id_sequence(ids, max_len, pad_id):
     return ids + [pad_id]*(max_len - len(ids))
     pass
 
-# Step 6 - stack_padded_sequences_to_batch (not yet solved)
-# TODO: implement
+# Step 6 - stack_padded_sequences_to_batch
+import torch
+
+def stack_padded_sequences_to_batch(padded_sequences):
+    """Stack a list of equal-length padded id sequences into a 2D LongTensor batch."""
+    # TODO: stack padded id sequences into a (B, L) torch.long tensor
+    return torch.tensor(padded_sequences,dtype=torch.long)
+    pass
 
 # Step 7 - scale_embeddings_by_sqrt_d_model (not yet solved)
 # TODO: implement
@@ -234,6 +240,9 @@ def pad_id_sequence(ids, max_len, pad_id):
 # TODO: implement
 
 # Step 67 - apply_adam_bias_correction (not yet solved)
+# TODO: implement
+
+# Step 68 - compute_adam_parameter_update (not yet solved)
 # TODO: implement
 
 # Step 69 - apply_adam_step_to_all_parameters (not yet solved)
